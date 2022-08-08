@@ -6,4 +6,104 @@
   html {
     font-family: "Rubik", sans-serif;
   }
+
+  :root {
+    --neutral: #fff;
+    --neutral-50: #fafafa;
+    --neutral-100: #f5f3f7;
+    --neutral-300: #c5c9cc;
+    --neutral-500: #a39da9;
+    --neutral-800: #3e2753;
+    --primary: #9341c8;
+    --primary-100: #eee5f4;
+    --primary-200: #e472ff;
+    --primary-300: #d99eff;
+    --gradient: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
+    --shadow-sm: 0px 10px 5px -5px rgba(62, 39, 83, 0.045318);
+    --shadow-md: 0px 0px 13px rgba(62, 39, 83, 0.251202);
+    --shadow-xl: 0px 30px 60px -10px rgba(62, 39, 83, 0.251202);
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto;
+    width: min(19.4375rem, 96%);
+  }
+
+  @media screen(sm) {
+    .container {
+      max-width: 19.4375rem;
+    }
+  }
+
+  @media screen(md) {
+    .container {
+      max-width: 19.4375rem;
+    }
+  }
+
+  @media screen(xl) {
+    .container {
+      max-width: 51.0625rem;
+    }
+  }
+}
+
+@layer components {
+  .headline-xl {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.9375rem;
+  }
+
+  .body-md {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .body-sm {
+    font-size: 0.5rem;
+    line-height: 0.6875rem;
+  }
+}
+
+@layer components {
+  .bg-patterns {
+    @apply relative min-h-screen w-full overflow-hidden;
+  }
+
+  .bg-patterns::before {
+    @apply rounded-full absolute block;
+    content: "";
+    width: 31.875rem;
+    height: 63.625rem;
+    top: -31.8125rem;
+    left: -20.125rem;
+    background: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
+  }
+
+  .bg-patterns::after {
+    @apply rounded-full absolute block;
+    content: "";
+    width: 31.875rem;
+    height: 63.625rem;
+    background: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
+    opacity: 0.03;
+    bottom: -31.8125rem;
+    right: -20.1875rem;
+  }
+
+  @media screen(xl) {
+    .bg-patterns::before {
+      top: -19.875rem;
+      left: -5.625rem;
+    }
+
+    .bg-patterns::after {
+      bottom: -21.0625rem;
+      right: -11.5625rem;
+    }
+  }
 }
