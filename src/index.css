@@ -28,7 +28,7 @@
 @layer components {
   .container {
     @apply mx-auto;
-    width: min(19.4375rem, 96%);
+    max-width: min(19.4375rem, 96%);
   }
 
   @media screen(sm) {
@@ -45,7 +45,8 @@
 
   @media screen(xl) {
     .container {
-      max-width: 51.0625rem;
+      max-width: 57.5rem;
+      padding-left: 6.4375rem;
     }
   }
 }
