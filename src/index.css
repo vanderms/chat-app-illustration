@@ -63,13 +63,17 @@
     line-height: 1.75rem;
   }
 
-  .body-sm {
+  .body-xs {
     font-size: 0.5rem;
     line-height: 0.6875rem;
   }
 }
 
 @layer components {
+  .bg-gradient {
+    background: var(--gradient);
+  }
+
   .bg-patterns {
     @apply relative min-h-screen w-full overflow-hidden;
   }
